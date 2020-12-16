@@ -1,4 +1,4 @@
-#Cropping_circle_sign.py
+#Cropping_sign.py
 import cv2 as cv 
 import numpy as np
 import os

@@ -1,4 +1,4 @@
-#Crop_using_mouse.py
+#Croping_tool.py
 
 import cv2 as cv
 
