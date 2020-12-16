@@ -13,12 +13,12 @@ def Crop(event, x, y, flags, param):
         x0 = x
         y0 = y
     elif event == cv.EVENT_MOUSEMOVE:
-        if isDragging:
+        if isDragging == True:
             drawing = image.copy()
             cv.rectangle(drawing, (x0, y0), (x, y), blue, 2)
             cv.imshow('image', drawing)
     elif event == cv.EVENT_LBUTTONUP:
-        if isDragging:
+        if isDragging == True:
             isDragging = False
             w = x - x0
             h = y - y0
