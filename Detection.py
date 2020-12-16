@@ -4,7 +4,7 @@ import os
 def make_canny(image):
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     blur = cv.GaussianBlur(gray,(3,3),0)
-    canny = cv.Canny(blur,50,150)
+    canny = cv.Canny(blur,50,150) ## 
     return canny 
 
 dir = "./snapshots"
