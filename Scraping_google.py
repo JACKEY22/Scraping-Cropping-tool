@@ -6,7 +6,7 @@ import ssl, os
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
-def google_image(keyword, dir):
+def get_google_image(keyword, dir):
     response = google.googleimagesdownload()
     arguments = {'keywords': keyword,
                  'limit': 500,
@@ -18,18 +18,18 @@ def google_image(keyword, dir):
     response.download(arguments)
 
 
-def test(keywords):
+def looping_keywords(keywords):
     cwd = os.getcwd()
     for keyword in keywords:
         dir = cwd + f"/{keyword}"
 
         if not os.path.exists(dir):
             os.mkdir(dir)
-        google_image(keyword, dir)
+        get_google_image(keyword, dir)
 
 
 def main():
     keywords = ['circle red sign', 'road crosswalk view']
-    test(keywords)
+    looping_keywords(keywords)
 
 main()
