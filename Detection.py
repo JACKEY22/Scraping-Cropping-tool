@@ -26,3 +26,5 @@ for road in roads:
             cv.drawContours(image, [approx], 0, (0,0,255), -1)
             cv.imshow("image", image)
             cv.waitKey(0)
+
+            #https://github.com/NVIDIA-AI-IOT/jetbot/tree/master/notebooks
