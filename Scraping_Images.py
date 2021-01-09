@@ -11,6 +11,7 @@ def get_google_image(keyword):
     arguments = {'keywords': keyword,
                  'limit': 5,
                  'output_directory': 'images', # The directory structure : <output_directory><image_directory><images>
+                 'image_directory' : keyword,
                 #'no_directory' : True,         
                  'print_urls': False,
                  'format':'jpg',
