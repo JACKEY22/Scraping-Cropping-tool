@@ -29,7 +29,7 @@ def Crop(event, x, y, flags, param):
                 crop = image[y0:y0+h, x0:x0+w]
                 cv.imshow('cropped', crop)
                 cv.moveWindow('cropped', 0, 0)
-                cv.imwrite('./cropped.png', crop)
+                cv.imwrite('./cropped.jpg', crop)
             else:
                 cv.imshow('image', image)
                 print('drag should start from left-top side')
